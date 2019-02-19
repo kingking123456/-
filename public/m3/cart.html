@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/mui/css/iconfont.css">
+    <link rel="stylesheet" href="./assets/mui/fonts/iconfont.ttf">
+    <!-- 第三方字体图标 -->
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-web.js"></script>
+    <script src="./js/public.js"></script>
+    <script src="./js/cart.js"></script>
+</head>
+<body>
+        <header class="mui-bar mui-bar-nav my-header">
+                <h1 class="mui-title">购物车</h1>
+                <a href="javascript:;" class="mui-icon mui-icon-search mui-pull-right"></a>
+        </header>
+        <nav class="mui-bar mui-bar-tab my-footer">
+                <a class="mui-tab-item" href="index.html">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a class="mui-tab-item" href="category.html">
+                    <span class="mui-icon mui-icon-bars"></span>
+                    <span class="mui-tab-label">分类</span>
+                </a>
+                <a class="mui-tab-item" href="cart.html">
+                    <span class="mui-icon iconfont icon-daohanggouwuche"></span>
+                    <span class="mui-tab-label">购物车</span>
+                </a>
+                <a class="mui-tab-item mui-active" href="user.html">
+                    <span class="mui-icon mui-icon-person"></span>
+                    <span class="mui-tab-label">会员中心</span>
+                </a>
+        </nav>
+        <!-- 区域滚动插件 -->
+        <div class="mui-scroll-wrapper" style='padding:44px  0  50px'>
+            <div class="mui-scroll">
+                <ul id="OA_task_1" class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="images/detail.jpg">
+                            <div class="mui-media-body">
+                                <p>
+                                   你是不是我最爱的人
+                                </p>
+                                <div class="mui-row">
+                                    <div class="mui-col-sm-6">
+                                        <input type="checkbox"  />
+                                        <span class="price-1">8888</span>
+                                        <span class="price-2 gray">9999</span>
+                                    </div>
+                                    <div class="mui-col-sm-4">
+                                        <span class="gray">鞋码：就看看</span>
+                                    </div>
+                                    <div class="mui-col-sm-2">
+                                        <span class="gray">x34双</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>	
+					</div>
+				</li>
+			</ul>
+                <h4 class="total">订单总额：¥<span>0</span></h4>
+            </div>
+        </div>
+</body>
+</html>
+
+				
+		

@@ -1,0 +1,65 @@
+.layout .my-content {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  bottom: 50px;
+  background: #f5f5f5;
+}
+.layout .my-content .category-left {
+  width: 80px;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.layout .my-content .category-left .links {
+  background: #fff;
+}
+.layout .my-content .category-left .links > a {
+  display: block;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+.layout .my-content .category-left .links > a.active {
+  background: #f5f5f5;
+  border-right: 1px solid transparent;
+}
+.layout .my-content .category-right {
+  margin-left: 90px;
+  height: 100%;
+  position: relative;
+}
+.layout .my-content .category-right .brand-list {
+  margin: 10px;
+  background: #fff;
+}
+.layout .my-content .category-right .brand-list > li {
+  width: 30%;
+  float: left;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+.layout .my-content .category-right .brand-list > li > a {
+  display: block;
+  width: 100%;
+}
+.layout .my-content .category-right .brand-list > li > a > img {
+  display: block;
+  width: 100%;
+}
+.layout .my-content .category-right .brand-list > li > a p {
+  text-align: center;
+}
+.layout .my-content .category-right .brand-list .nores {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}

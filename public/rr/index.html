@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/mui/iconfont/iconfont.ttf">
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-web.js"></script>
+    <script src="./js/base.js"></script>
+</head>
+<body>
+    <div class="layout">
+        <ul class="mui-table-view">
+            <!-- <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="./images/shuijiao.jpg">
+                    <div class="mui-media-body">
+                        幸福
+                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="./images/muwu.jpg">
+                    <div class="mui-media-body">
+                        木屋
+                        <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
+                    <div class="mui-media-body">
+                        CBD
+                        <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+                    </div>
+                </a>
+            </li> -->
+        </ul>
+    </div>
+    <script type="text/template" id="tpl">
+        <% for(var i=0;i< rows.length;i++){ %>
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="<%= rows[i].photo%>">
+                    <div class="mui-media-body">
+                        <%=rows[i].title %>
+                        <p class='mui-ellipsis'><%=rows[i].con %></p>
+                    </div>
+                </a>
+            </li>
+        <% } %>
+    </script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"./js/index.json",
+                type:"get",
+                dataType:"json",
+                success:function(ff){
+                  var html=  template("tpl",ff);
+                  console.log(html);
+                $("ul").html(html);
+                console.log(ff);
+
+                 }
+            })
+               
+        })
+    
+    </script>
+</body>
+</html>

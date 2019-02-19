@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/mui/css/iconfont.css">
+    <link rel="stylesheet" href="./assets/mui/fonts/iconfont.ttf">
+    <!-- 第三方字体图标 -->
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-web.js"></script>
+    <script src="./js/public.js"></script>
+    <script src="./js/category.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <!-- 头部结构 -->
+        <header class="mui-bar mui-bar-nav">
+            <a href="search.html" class="mui-action-back mui-icon mui-icon-search mui-pull-right"></a>
+            <h1 class="mui-title">乐淘云购</h1>
+        </header>
+        <!-- 底部导航结构 -->
+        <nav class="mui-bar mui-bar-tab ">
+            <a class="mui-tab-item mui-active" href="index.html">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </a>
+            <a class="mui-tab-item" href="category-search.html">
+                <span class="mui-icon mui-icon-bars"></span>
+                <span class="mui-tab-label">分类</span>
+            </a>
+            <a class="mui-tab-item" href="#tabbar-with-contact">
+                <span class=" mui-icon fa fa-shopping-cart" aria-hidden="true"></span>
+                <span class="mui-tab-label">购物车</span>
+            </a>
+            <a class="mui-tab-item" href="user.html">
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">会员中心</span>
+            </a>
+        </nav>
+        <div class="my-content">
+            <div class="category-left">
+                <div class="mui-scroll-wrapper">
+                     <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-scroll">
+                        <div class="links">
+                        
+                           
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="category-right">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class=" brand-list mui-clearfix">
+                            
+                            
+
+
+                        </ul>
+
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--一级分类 -->
+    <script type="text/template" id="category-first">
+       <% for(var i=0; i< first.length;i++){ %>
+            <a href="#" data-id=<%=first[i].id %>><%=first[i].categoryName %></a>
+       <% } %>
+    </script>
+    <!-- 二级分类 -->
+    <script type="text/template" id="category-second">
+        <% for(var i=0;i< rows.length;i++) { %>
+            <li>
+               
+                <a href="#">
+                    <img src="<%=rows[i].brandLogo %>">
+                    <p><%=rows[i].brandName %></p>
+                </a>
+            
+            </li>
+        <% } %>  
+        <% if(!rows.length){ %>
+            <div class="nores">暂无数据</div>
+        <% } %>
+        
+    </script>
+
+
+</body>
+
+</html>

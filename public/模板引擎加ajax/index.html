@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./artTemplate/template-web.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .con{
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            background-color: #333;
+        }
+        .con>ul{
+            width: 100%;
+        }
+        .con>ul>li{
+            width: 50px;
+            height: 50px;
+           color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <ul>
+           
+        </ul>
+    </div> 
+    <script type="text/template" id="tpl">
+        {{ each dd  as value  index}}
+        <li>
+           <span>{{ value.name }}</span> 
+           <span>{{ value.age }}</span>
+           <span>{{ value.marry }}</span>
+        </li>
+        {{/each}}
+    </script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"./data.json",
+                type:"get",
+                dataType:"json",
+                success:function(ff){
+                    console.log(ff);
+                   var  html= template("tpl",{dd:ff.res});
+                   console.log(html);
+                }
+            })
+        })
+    </script>
+</body>
+</html>
